@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="bg-red-50">
+    <div className="my-max-width">
       <h1 className="text-4xl">Muhammad Nabil Fikri Sudjarpadi Putra</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus deleniti

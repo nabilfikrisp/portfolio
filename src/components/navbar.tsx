@@ -1,3 +1,7 @@
 export function Navbar() {
-  return <div className="h-16 bg-blue-300">Navbar</div>;
+  return (
+    <header className="border-b-my-accent-green sticky top-0 z-50 border-b py-3 backdrop-blur-sm">
+      <div className="my-max-width">Navbar</div>
+    </header>
+  );
 }
