@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${jakartaSans.variable} ${notoSerifGeorgian.variable} ${geistMono.variable} flex min-h-screen w-full flex-col antialiased`}
+        className={`${outfit.variable} ${jakartaSans.variable} ${notoSerifGeorgian.variable} ${geistMono.variable}`}
       >
         {children}
       </body>
