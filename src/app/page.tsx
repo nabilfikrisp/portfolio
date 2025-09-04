@@ -18,7 +18,7 @@ export default function Home() {
         ipsum inventore veritatis saepe, quas rem facere, atque a! Consectetur
         quaerat natus aut facilis quibusdam. Officia, eaque!
       </p>
-      <Button>Click me</Button>
+      <Button>Click me dasd</Button>
     </div>
   );
 }
