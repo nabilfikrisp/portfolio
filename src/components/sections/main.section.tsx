@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export function MainSection() {
   return (
-    <section className="mx-auto flex flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5">
+    <section
+      id="header-section"
+      className="mx-auto flex flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5"
+    >
       <div className="flex w-full flex-1 flex-col gap-2">
         <h1 className="text-my-headline text-center text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-start sm:text-[44px]">
           Muhammad Nabil Fikri Sudjarpadi Putra
@@ -64,7 +67,7 @@ export function MainSection() {
 
       <div className="border-my-accent-green flex h-fit w-fit items-center justify-center place-self-center overflow-hidden rounded-full border-2 p-1 sm:place-self-auto">
         <img
-          className="h-48 w-48 rounded-full object-cover"
+          className="h-40 w-40 rounded-full object-cover"
           src="/assets/profile.png"
         />
       </div>
