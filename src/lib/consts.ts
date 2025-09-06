@@ -1,4 +1,4 @@
-import { WorkExperience } from "./type";
+import { EducationHistory, WorkExperience } from "./type";
 
 export const EXTERNAL_LINKS = [
   {
@@ -113,5 +113,26 @@ export const WORKS: WorkExperience[] = [
     date: "Jun 2022 - Sep 2022",
     description: "Developed a voting app for their award event.",
     descriptionList: ["Used by around 200 total users."],
+  },
+];
+
+export const EDUCATIONS: EducationHistory[] = [
+  {
+    imageUrl: "/assets/experiences/educations/unpad.png",
+    title: "Bachelor of Computer Science",
+    institute: "Universitas Padjadjaran",
+    date: "2020 - 2024",
+  },
+  {
+    imageUrl: "/assets/experiences/educations/kampus-merdeka.jpeg",
+    title: "Front-End Web and Back-End Developer at Dicoding",
+    institute: "MSIB Kampus Merdeka",
+    date: "2023",
+  },
+  {
+    imageUrl: "/assets/experiences/educations/sman5.png",
+    title: "High School Graduate",
+    institute: "SMAN 5 Bandung",
+    date: "2017 - 2020",
   },
 ];

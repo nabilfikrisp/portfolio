@@ -9,3 +9,10 @@ export type WorkExperience = {
   companyLink?: string;
   descriptionList: string[];
 };
+
+export type EducationHistory = {
+  imageUrl: string;
+  title: string;
+  institute: string;
+  date: string;
+};

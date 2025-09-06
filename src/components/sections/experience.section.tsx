@@ -1,4 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { EducationHistoryList } from "../education-history-list";
 import { WorkExperienceList } from "../work-experience-list";
 
 export function ExperienceSection() {
@@ -25,7 +26,9 @@ export function ExperienceSection() {
         <TabsContent value="work">
           <WorkExperienceList />
         </TabsContent>
-        <TabsContent value="education">Educaiton</TabsContent>
+        <TabsContent value="education">
+          <EducationHistoryList />
+        </TabsContent>
       </Tabs>
     </section>
   );
