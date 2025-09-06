@@ -13,19 +13,19 @@ export function ExperienceSection() {
             value="work"
             className="text-my-white data-[state=active]:bg-my-accent-orange"
           >
-            Account
+            Work
           </TabsTrigger>
           <TabsTrigger
-            value="password"
+            value="education"
             className="text-my-white data-[state=active]:bg-my-accent-orange"
           >
-            Password
+            Education
           </TabsTrigger>
         </TabsList>
         <TabsContent value="work">
           <WorkExperienceList />
         </TabsContent>
-        <TabsContent value="password">Password</TabsContent>
+        <TabsContent value="education">Educaiton</TabsContent>
       </Tabs>
     </section>
   );
