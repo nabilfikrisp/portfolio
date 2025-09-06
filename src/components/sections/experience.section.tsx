@@ -1,6 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { EducationHistoryList } from "../education-history-list";
-import { WorkExperienceList } from "../work-experience-list";
+import { ExpereienceTabs } from "../experience-tabs";
 
 export function ExperienceSection() {
   return (
@@ -9,28 +7,7 @@ export function ExperienceSection() {
       className="my-max-width w-full space-y-4"
     >
       <h1 className="text-my-headline text-3xl font-semibold">Experience</h1>
-      <Tabs defaultValue="work">
-        <TabsList className="bg-my-accent-green w-full">
-          <TabsTrigger
-            value="work"
-            className="text-my-white data-[state=active]:bg-my-accent-orange"
-          >
-            Work
-          </TabsTrigger>
-          <TabsTrigger
-            value="education"
-            className="text-my-white data-[state=active]:bg-my-accent-orange"
-          >
-            Education
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="work">
-          <WorkExperienceList className="animate-spring-right" />
-        </TabsContent>
-        <TabsContent value="education">
-          <EducationHistoryList className="animate-spring-left" />
-        </TabsContent>
-      </Tabs>
+      <ExpereienceTabs />
     </section>
   );
 }

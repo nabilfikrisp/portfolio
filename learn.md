@@ -59,3 +59,7 @@ Use it like a normal Tailwind class:
 ```
 
 - Keeps your animation **reusable and inline with Tailwind utilities**.
+
+### **Animate Tab Switch**
+
+https://github.com/shadcn-ui/ui/discussions/2108
