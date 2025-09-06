@@ -25,10 +25,10 @@ export function ExperienceSection() {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="work">
-          <WorkExperienceList />
+          <WorkExperienceList className="animate-spring-right" />
         </TabsContent>
         <TabsContent value="education">
-          <EducationHistoryList />
+          <EducationHistoryList className="animate-spring-left" />
         </TabsContent>
       </Tabs>
     </section>
