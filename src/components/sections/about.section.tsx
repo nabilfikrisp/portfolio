@@ -2,7 +2,7 @@ export function AboutSection() {
   return (
     <section
       id="about-me-section"
-      className="space-y-2"
+      className="my-max-width w-full space-y-2"
     >
       <h1 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         About Me

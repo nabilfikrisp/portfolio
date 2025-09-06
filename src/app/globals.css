@@ -157,12 +157,59 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 
+  /* My Custom Theme */
   --color-my-background: #f8f5f2;
   --color-my-headline: #232323;
   --color-my-paragraph: #222525;
   --color-my-accent-green: #078080;
   --color-my-accent-orange: #f45d48;
   --color-my-white: #fffffe;
+
+  /* Spring-like horizontal slide animations */
+  --animate-spring-left: spring-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  --animate-spring-right: spring-right 0.5s
+    cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+
+  @keyframes spring-left {
+    0% {
+      opacity: 0;
+      transform: translateX(2rem);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(-0.3rem);
+    }
+    80% {
+      transform: translateX(0.15rem);
+    }
+    90% {
+      transform: translateX(-0.05rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes spring-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-2rem);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(0.3rem);
+    }
+    80% {
+      transform: translateX(-0.15rem);
+    }
+    90% {
+      transform: translateX(0.05rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
 @layer base {
@@ -193,8 +240,6 @@
   }
 }
 
-@layer components {
-  .my-max-width {
-    @apply mx-auto max-w-5xl px-4;
-  }
+@utility my-max-width {
+  @apply mx-auto max-w-5xl px-4;
 }

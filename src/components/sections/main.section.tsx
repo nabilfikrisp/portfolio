@@ -5,7 +5,7 @@ export function MainSection() {
   return (
     <section
       id="header-section"
-      className="mx-auto flex flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5"
+      className="my-max-width mx-auto flex w-full flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5"
     >
       <div className="flex w-full flex-1 flex-col gap-2">
         <h1 className="text-my-headline text-center text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-start sm:text-[44px]">
