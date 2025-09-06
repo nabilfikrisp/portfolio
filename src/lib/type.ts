@@ -1,3 +1,5 @@
+import { SKILLS } from "./consts";
+
 export type WorkExperience = {
   imageUrl: string;
   title: string;
@@ -16,3 +18,21 @@ export type EducationHistory = {
   institute: string;
   date: string;
 };
+
+export type Skill = (typeof SKILLS)[number];
+export type SkillId = Skill["slug"];
+export type SkillCategory = Skill["category"];
+
+export type Project = {
+  id: string;
+  name: string;
+  skills: SkillId[];
+};
+
+export const prjc: Project[] = [
+  {
+    id: "toeps",
+    name: "toeps.id",
+    skills: ["react"],
+  },
+];
