@@ -5,9 +5,9 @@ import { MainSection } from "@/components/sections/main.section";
 export default function Home() {
   return (
     <div className="space-y-4 py-6 sm:py-8">
-      <MainSection />
-      <AboutSection />
-      <ExperienceSection />
+      <MainSection className="animate-spring-left" />
+      <AboutSection className="animate-spring-right" />
+      <ExperienceSection className="animate-spring-left" />
     </div>
   );
 }
