@@ -1,4 +1,4 @@
-import { EXTERNAL_LINKS, RESUME_LINK } from "@/lib/consts";
+import { EXTERNAL_LINKS, PROFILE_PICTURE_URL, RESUME_LINK } from "@/lib/consts";
 import Link from "next/link";
 
 export function MainSection() {
@@ -68,7 +68,7 @@ export function MainSection() {
       <div className="border-my-accent-green flex h-fit w-fit items-center justify-center place-self-center overflow-hidden rounded-full border-2 p-1 sm:place-self-auto">
         <img
           className="h-40 w-40 rounded-full object-cover"
-          src="/assets/profile.png"
+          src={PROFILE_PICTURE_URL}
         />
       </div>
     </section>

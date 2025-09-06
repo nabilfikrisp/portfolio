@@ -1,5 +1,7 @@
 import { EducationHistory, WorkExperience } from "./type";
 
+export const PROFILE_PICTURE_URL = "/assets/profile.png";
+
 export const EXTERNAL_LINKS = [
   {
     href: "https://www.linkedin.com/in/mnabilfikrisp/",
@@ -11,16 +13,6 @@ export const EXTERNAL_LINKS = [
     imgSrc: "/assets/icons/github-light.svg",
     imgAlt: "github-icon",
   },
-  // {
-  //   href: "https://x.com/micanskuy",
-  //   imgSrc: "/icons/x-dark.svg",
-  //   imgAlt: "x-icon",
-  // },
-  // {
-  //   href: "https://x.com/micanskuy",
-  //   imgSrc: "/icons/instagram-dark.svg",
-  //   imgAlt: "instagram-icon",
-  // },
 ] as const;
 
 export const RESUME_LINK = "/assets/resume.pdf";
