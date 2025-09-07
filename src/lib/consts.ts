@@ -2,6 +2,8 @@ import { EducationHistory, Project, WorkExperience } from "./type";
 
 export const PROFILE_PICTURE_URL = "/assets/profile.png";
 
+export const PROFILE_PICTURE_URL = "/assets/profile.png";
+
 export const EXTERNAL_LINKS = [
   {
     href: "https://www.linkedin.com/in/mnabilfikrisp/",
