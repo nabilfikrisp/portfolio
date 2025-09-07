@@ -20,19 +20,15 @@ export type EducationHistory = {
 };
 
 export type Skill = (typeof SKILLS)[number];
-export type SkillId = Skill["slug"];
+export type SkillId = Skill["slug"] | "more";
 export type SkillCategory = Skill["category"];
 
 export type Project = {
   id: string;
-  name: string;
+  title: string;
   skills: SkillId[];
+  description: string;
+  imageUrl?: string;
+  liveUrl?: string;
+  sourceCodeUrl?: string;
 };
-
-export const prjc: Project[] = [
-  {
-    id: "toeps",
-    name: "toeps.id",
-    skills: ["react"],
-  },
-];
