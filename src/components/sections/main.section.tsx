@@ -10,7 +10,7 @@ export function MainSection({ className }: MainSectionProps) {
     <section
       id="header-section"
       className={cn(
-        "my-max-width mx-auto flex w-full flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5",
+        "max-width-app mx-auto flex w-full flex-col-reverse gap-3 rounded-lg sm:flex-row sm:gap-5",
         className,
       )}
     >

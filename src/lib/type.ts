@@ -1,3 +1,5 @@
+import { SKILLS } from "./consts";
+
 export type WorkExperience = {
   imageUrl: string;
   title: string;
@@ -15,4 +17,18 @@ export type EducationHistory = {
   title: string;
   institute: string;
   date: string;
+};
+
+export type Skill = (typeof SKILLS)[number];
+export type SkillId = Skill["slug"] | "more";
+export type SkillCategory = Skill["category"];
+
+export type Project = {
+  id: string;
+  title: string;
+  skills: SkillId[];
+  description: string;
+  imageUrl?: string;
+  liveUrl?: string;
+  sourceCodeUrl?: string;
 };

@@ -1,4 +1,6 @@
-import { EducationHistory, WorkExperience } from "./type";
+import { EducationHistory, Project, WorkExperience } from "./type";
+
+export const PROFILE_PICTURE_URL = "/assets/profile.png";
 
 export const PROFILE_PICTURE_URL = "/assets/profile.png";
 
@@ -126,5 +128,196 @@ export const EDUCATIONS: EducationHistory[] = [
     title: "High School Graduate",
     institute: "SMAN 5 Bandung",
     date: "2017 - 2020",
+  },
+];
+
+export const SKILLS = [
+  // Languages
+  {
+    slug: "typescript",
+    name: "TypeScript",
+    iconUrl: "/assets/icons/skills/typescript.svg",
+    category: "language",
+  },
+  {
+    slug: "javascript",
+    name: "JavaScript",
+    iconUrl: "/assets/icons/skills/javascript.svg",
+    category: "language",
+  },
+  {
+    slug: "python",
+    name: "Python",
+    iconUrl: "/assets/icons/skills/python.svg",
+    category: "language",
+  },
+
+  // Frontend
+  {
+    slug: "react",
+    name: "React",
+    iconUrl: "/assets/icons/skills/react.svg",
+    category: "frontend",
+  },
+  {
+    slug: "nextjs",
+    name: "Next.js",
+    iconUrl: "/assets/icons/skills/nextjs.svg",
+    category: "frontend",
+  },
+  {
+    slug: "tailwindcss",
+    name: "Tailwind CSS",
+    iconUrl: "/assets/icons/skills/tailwindcss.svg",
+    category: "frontend",
+  },
+  {
+    slug: "tanstack-query",
+    name: "TanStack Query",
+    iconUrl: "/assets/icons/skills/tanstack.svg",
+    category: "frontend",
+  },
+
+  // Backend
+  {
+    slug: "expressjs",
+    name: "Express.js",
+    iconUrl: "/assets/icons/skills/expressjs.svg",
+    category: "backend",
+  },
+  {
+    slug: "nestjs",
+    name: "NestJS",
+    iconUrl: "/assets/icons/skills/nestjs.svg",
+    category: "backend",
+  },
+
+  // Database
+  {
+    slug: "postgresql",
+    name: "PostgreSQL",
+    iconUrl: "/assets/icons/skills/postgresql.svg",
+    category: "database",
+  },
+  {
+    slug: "prisma",
+    name: "Prisma",
+    iconUrl: "/assets/icons/skills/prisma.svg",
+    category: "database",
+  },
+  {
+    slug: "mongodb",
+    name: "MongoDB",
+    iconUrl: "/assets/icons/skills/mongodb.svg",
+    category: "database",
+  },
+
+  // Testing
+  {
+    slug: "jest",
+    name: "Jest",
+    iconUrl: "/assets/icons/skills/jest.svg",
+    category: "testing",
+  },
+  {
+    slug: "cypress",
+    name: "Cypress",
+    iconUrl: "/assets/icons/skills/cypress.svg",
+    category: "testing",
+  },
+  {
+    slug: "playwright",
+    name: "Playwright",
+    iconUrl: "/assets/icons/skills/playwright.svg",
+    category: "testing",
+  },
+  {
+    slug: "vitest",
+    name: "Vitest",
+    iconUrl: "/assets/icons/skills/vitest.svg",
+    category: "testing",
+  },
+
+  // Tools
+  {
+    slug: "git",
+    name: "Git",
+    iconUrl: "/assets/icons/skills/git.svg",
+    category: "tool",
+  },
+  {
+    slug: "figma",
+    name: "Figma",
+    iconUrl: "/assets/icons/skills/figma.svg",
+    category: "tool",
+  },
+] as const;
+
+export const PROJECTS: Project[] = [
+  {
+    id: "toeps",
+    title: "toeps.id",
+    description: "My Work for LKP Neo Spectra English",
+    imageUrl: "/assets/projects/toeps.png",
+    liveUrl: "https://app.toeps.id",
+    skills: ["react", "typescript", "tailwindcss", "nestjs", "postgresql"],
+  },
+  {
+    id: "twostrap",
+    title: "Twostrap.id",
+    description: "My Work for Octoscript",
+    imageUrl: "/assets/projects/twostrap.png",
+    liveUrl: "https://twostrap.id",
+    skills: ["react", "typescript", "tailwindcss", "nextjs"],
+  },
+  {
+    id: "fullstack-open",
+    title: "Fullstack Open Course",
+    description:
+      "My repository for the exercises from the Fullstack Open course by University of Helsinki",
+    sourceCodeUrl: "https://github.com/nabilfikrisp/fullstackopen-helinski",
+    skills: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "expressjs",
+      "mongodb",
+      "jest",
+      "playwright",
+      "vitest",
+      "cypress",
+      "more",
+    ],
+  },
+  {
+    id: "yoga-gnn",
+    title: "Yoga GNN",
+    description:
+      "Graph Neural Network for Yoga Image Classification. This project is a part of my thesis in University",
+    imageUrl: "/assets/projects/yoga-gnn.png",
+
+    liveUrl: "https://yoga-gnn-nabilfikrisp.vercel.app/",
+    sourceCodeUrl: "https://github.com/nabilfikrisp/yoga-gnn-app",
+    skills: ["react", "typescript", "tailwindcss", "python"],
+  },
+  {
+    id: "tripl",
+    title: "Tripl",
+    description:
+      "Travel destination and planner app for Bandung City. This project is a part of my final project in University.",
+    imageUrl: "/assets/projects/tripl.png",
+    liveUrl: "https://tripl.vercel.app/",
+    sourceCodeUrl: "https://github.com/nabilfikrisp/ppl2-tripl",
+    skills: ["react", "javascript", "expressjs", "jest", "mongodb"],
+  },
+  {
+    id: "dicoding-forum",
+    title: "Dicoding Forum",
+    description:
+      "A forum app built with React and TypeScript. This project is part of the React Developer Expert path in Dicoding.",
+    imageUrl: "/assets/projects/dicoding-forum.png",
+    liveUrl: "https://forum-micanskuy.vercel.app/",
+    sourceCodeUrl: "https://github.com/nabilfikrisp/dicoding-forum-app",
+    skills: ["react", "typescript", "tailwindcss", "cypress"],
   },
 ];

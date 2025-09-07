@@ -284,6 +284,10 @@
   }
 }
 
-@utility my-max-width {
+@utility max-width-app {
   @apply mx-auto max-w-5xl px-4;
+}
+
+@utility px-app {
+  @apply px-4;
 }
