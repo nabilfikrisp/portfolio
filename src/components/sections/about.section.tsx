@@ -7,7 +7,7 @@ export function AboutSection({ className }: AboutSectionProps) {
   return (
     <section
       id="about-me-section"
-      className={cn("my-max-width w-full space-y-2", className)}
+      className={cn("max-width-app w-full space-y-2", className)}
     >
       <h1 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         About Me

@@ -3,7 +3,7 @@
 Define a reusable class that appears in autocomplete:
 
 ```css
-@utility my-max-width {
+@utility max-width-app {
   @apply mx-auto max-w-5xl px-4;
 }
 ```
@@ -11,7 +11,7 @@ Define a reusable class that appears in autocomplete:
 Or using plain CSS:
 
 ```css
-@utility my-max-width {
+@utility max-width-app {
   margin-left: auto;
   margin-right: auto;
 }
@@ -20,7 +20,7 @@ Or using plain CSS:
 Use it like a normal Tailwind class:
 
 ```html
-<section class="my-max-width">
+<section class="max-width-app">
   <!-- content -->
 </section>
 ```

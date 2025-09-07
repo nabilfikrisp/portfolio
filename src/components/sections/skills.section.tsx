@@ -9,7 +9,7 @@ export function SkillsSection({ className }: SkillsSectionProps) {
   return (
     <section
       id="skills-section"
-      className={cn("my-max-width w-full space-y-4", className)}
+      className={cn("max-width-app w-full space-y-4", className)}
     >
       <h1 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         Skills
