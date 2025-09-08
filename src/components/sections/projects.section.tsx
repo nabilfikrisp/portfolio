@@ -15,9 +15,9 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
       id="projects-section"
       className={cn("max-width-app w-full space-y-4", className)}
     >
-      <h1 className="text-my-headline text-2xl font-semibold sm:text-3xl">
+      <h2 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         Projects
-      </h1>
+      </h2>
 
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2">
         {PROJECTS.map((project) => (
@@ -41,7 +41,7 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
           className="duration-500 hover:-rotate-2"
         >
           <Link
-            href={EXTERNAL_LINKS[1].href}
+            href={EXTERNAL_LINKS.GITHUB.href}
             target="_blank"
             rel="noopener noreferrer"
           >

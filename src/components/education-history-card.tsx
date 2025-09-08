@@ -25,6 +25,7 @@ export function EducationHistoryCard({
         <img
           className="border-my-accent-green bg-my-background relative z-10 aspect-square h-16 w-16 overflow-hidden rounded border object-scale-down lg:h-20 lg:w-20"
           src={education.imageUrl}
+          title={education.institute}
           alt={
             education.institute
               ? `${education.institute} logo`

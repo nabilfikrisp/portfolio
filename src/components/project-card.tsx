@@ -28,6 +28,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <img
             src={project.imageUrl}
             alt={project.title}
+            title={project.title}
             className="h-full w-full object-cover"
           />
         ) : (
@@ -58,6 +59,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <img
                 src={`${SKILLS_ICON_PATH}/${skillSlug}.svg`}
                 alt={`${skillSlug}-icon`}
+                title={skillSlug}
                 className="h-full w-full rounded-sm"
               />
             </span>

@@ -20,7 +20,10 @@ export function MainSection({ className }: MainSectionProps) {
         </h1>
 
         <h2 className="text-center text-2xl text-balance sm:text-start">
-          Full Stack Developer
+          <span className="text-my-accent-green font-semibold">
+            nabilfikrisp
+          </span>{" "}
+          | Full Stack Developer
         </h2>
         <div className="flex items-center justify-center sm:justify-start">
           <div className="bg-my-accent-green mr-2 rounded-sm p-1">
@@ -28,6 +31,9 @@ export function MainSection({ className }: MainSectionProps) {
               className="h-4 w-6 rounded-sm"
               src="/assets/icons/flag.webp"
               alt="indonesian-flag"
+              title="Indonesian Flag"
+              width={16}
+              height={24}
             />
           </div>
           <p className="text-base font-medium sm:text-lg">
@@ -46,13 +52,16 @@ export function MainSection({ className }: MainSectionProps) {
               <img
                 src="/assets/icons/resume.svg"
                 alt="resume-icon"
-                className="text mr-1 h-6 w-6 object-cover"
+                title="Resume"
+                className="text mr-1 object-cover"
+                width={24}
+                height={24}
               />
               Resume
             </Link>
           </li>
 
-          {EXTERNAL_LINKS.map((link, index) => (
+          {Object.values(EXTERNAL_LINKS).map((link, index) => (
             <li
               key={`${link.imgAlt}-${index}`}
               className="h-8 w-8 transition-transform duration-500 hover:-rotate-12"
@@ -65,6 +74,9 @@ export function MainSection({ className }: MainSectionProps) {
                 <img
                   src={link.imgSrc}
                   alt={link.imgAlt}
+                  title={link.imgAlt}
+                  width={32}
+                  height={32}
                 />
               </Link>
             </li>
@@ -76,6 +88,10 @@ export function MainSection({ className }: MainSectionProps) {
         <img
           className="h-40 w-40 rounded-full object-cover"
           src={PROFILE_PICTURE_URL}
+          alt="profile-picture"
+          title="Profile Picture"
+          width={160}
+          height={160}
         />
       </div>
     </section>

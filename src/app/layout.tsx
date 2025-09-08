@@ -1,3 +1,4 @@
+import { HOSTING_URL, PROFILE_PICTURE_URL } from "@/lib/consts";
 import type { Metadata } from "next";
 import {
   Geist_Mono,
@@ -33,7 +34,30 @@ const notoSerifGeorgian = Noto_Serif_Georgian({
 export const metadata: Metadata = {
   title: "nabilfikrisp - Fullstack Developer",
   description:
-    "Personal portfolio of nabilfikrisp, a Fullstack Developer specializing in TypeScript stacks. Showcasing projects, blog posts, and experience.",
+    "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
+  openGraph: {
+    title: "nabilfikrisp - Fullstack Developer",
+    description:
+      "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
+    type: "website",
+    url: HOSTING_URL,
+    images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "nabilfikrisp - Fullstack Developer",
+    description:
+      "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
+    images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
+    site: "@nabilfikrisp",
+  },
+  alternates: {
+    canonical: HOSTING_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

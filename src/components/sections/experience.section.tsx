@@ -10,7 +10,7 @@ export function ExperienceSection({ className }: ExperienceSectionProps) {
       id="experience-section"
       className={cn("max-width-app w-full space-y-4", className)}
     >
-      <h1 className="text-my-headline text-3xl font-semibold">Experience</h1>
+      <h2 className="text-my-headline text-3xl font-semibold">Experience</h2>
       <ExpereienceTabs />
     </section>
   );

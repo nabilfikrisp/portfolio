@@ -11,9 +11,9 @@ export function SkillsSection({ className }: SkillsSectionProps) {
       id="skills-section"
       className={cn("max-width-app w-full space-y-4", className)}
     >
-      <h1 className="text-my-headline text-2xl font-semibold sm:text-3xl">
+      <h2 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         Skills
-      </h1>
+      </h2>
 
       <div className="flex flex-wrap gap-4">
         {SKILLS.map((skill) => (
@@ -24,7 +24,10 @@ export function SkillsSection({ className }: SkillsSectionProps) {
             <img
               src={skill.iconUrl}
               alt={`${skill.name} icon`}
+              title={skill.name}
               className="h-5 w-5 object-contain"
+              width={20}
+              height={20}
             />
             <span className="text-my-paragraph text-sm font-medium">
               {skill.name}

@@ -26,6 +26,7 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         <img
           className="border-my-accent-green bg-my-background relative z-10 aspect-square h-16 w-16 overflow-hidden rounded border object-scale-down lg:h-20 lg:w-20"
           src={work.imageUrl}
+          title={work.company}
           alt={work.company ? `${work.company} logo` : work.title}
         />
       </div>
