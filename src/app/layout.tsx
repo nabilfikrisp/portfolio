@@ -54,6 +54,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: HOSTING_URL,
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
