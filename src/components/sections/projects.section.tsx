@@ -41,7 +41,7 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
           className="duration-500 hover:-rotate-2"
         >
           <Link
-            href={EXTERNAL_LINKS[1].href}
+            href={EXTERNAL_LINKS.GITHUB.href}
             target="_blank"
             rel="noopener noreferrer"
           >
