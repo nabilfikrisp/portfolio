@@ -31,6 +31,7 @@ export function MainSection({ className }: MainSectionProps) {
               className="h-4 w-6 rounded-sm"
               src="/assets/icons/flag.webp"
               alt="indonesian-flag"
+              title="Indonesian Flag"
               width={16}
               height={24}
             />
@@ -51,6 +52,7 @@ export function MainSection({ className }: MainSectionProps) {
               <img
                 src="/assets/icons/resume.svg"
                 alt="resume-icon"
+                title="Resume"
                 className="text mr-1 object-cover"
                 width={24}
                 height={24}
@@ -72,6 +74,7 @@ export function MainSection({ className }: MainSectionProps) {
                 <img
                   src={link.imgSrc}
                   alt={link.imgAlt}
+                  title={link.imgAlt}
                   width={32}
                   height={32}
                 />
@@ -86,6 +89,7 @@ export function MainSection({ className }: MainSectionProps) {
           className="h-40 w-40 rounded-full object-cover"
           src={PROFILE_PICTURE_URL}
           alt="profile-picture"
+          title="Profile Picture"
           width={160}
           height={160}
         />

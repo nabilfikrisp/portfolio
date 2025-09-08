@@ -34,13 +34,25 @@ const notoSerifGeorgian = Noto_Serif_Georgian({
 export const metadata: Metadata = {
   title: "nabilfikrisp - Fullstack Developer",
   description:
-    "nabilfikrisp's portfolio showcases expertise in frontend development with TypeScript, React, and Next.js, featuring dynamic projects and growing full-stack experience.",
+    "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
   openGraph: {
     title: "nabilfikrisp - Fullstack Developer",
     description:
-      "Explore nabilfikrisp's portfolio, highlighting TypeScript, React, and Next.js projects with a focus on frontend excellence and emerging full-stack skills.",
+      "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
+    type: "website",
     url: HOSTING_URL,
     images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "nabilfikrisp - Fullstack Developer",
+    description:
+      "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
+    images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
+    site: "@nabilfikrisp",
+  },
+  alternates: {
+    canonical: HOSTING_URL,
   },
 };
 

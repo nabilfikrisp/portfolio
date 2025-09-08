@@ -36,6 +36,7 @@ export function Footer() {
                 <img
                   src={link.imgSrc}
                   alt={link.imgAlt}
+                  title={link.imgAlt}
                 />
               </Link>
             </li>

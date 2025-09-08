@@ -24,6 +24,7 @@ export function SkillsSection({ className }: SkillsSectionProps) {
             <img
               src={skill.iconUrl}
               alt={`${skill.name} icon`}
+              title={skill.name}
               className="h-5 w-5 object-contain"
               width={20}
               height={20}
