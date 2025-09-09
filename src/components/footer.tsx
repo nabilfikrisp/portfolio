@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="border-t-my-accent-green from-background to-muted/20 border-t bg-gradient-to-b py-6">
+    <footer className="border-t-my-accent-green from-background to-muted/20 border-t py-6">
       <address className="motion-safe:animate-spring-right max-width-app flex w-full flex-row not-italic">
         <div>
           <h3 className="text-my-accent-green font-heading text-xl font-semibold transition-transform lg:text-start">

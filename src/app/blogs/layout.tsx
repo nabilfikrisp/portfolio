@@ -1,0 +1,16 @@
+import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+
+export default function BlogsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="bg-my-background flex min-h-screen flex-col subpixel-antialiased">
+      <Navbar />
+      <main className="flex flex-1 flex-col">{children}</main>
+      <Footer />
+    </div>
+  );
+}
