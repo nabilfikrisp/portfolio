@@ -38,7 +38,7 @@ export function ProjectsSection({ className }: ProjectsSectionProps) {
         <Button
           asChild
           variant="brand-green"
-          className="duration-500 hover:-rotate-2"
+          className="duration-500 motion-safe:hover:-rotate-2"
         >
           <Link
             href={EXTERNAL_LINKS.GITHUB.href}

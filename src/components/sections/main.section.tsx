@@ -16,15 +16,24 @@ export function MainSection({ className }: MainSectionProps) {
     >
       <div className="flex w-full flex-1 flex-col gap-2">
         <h1 className="text-my-headline text-center text-3xl leading-tight font-semibold tracking-tight text-balance sm:text-start sm:text-[44px]">
-          Muhammad Nabil Fikri Sudjarpadi Putra
+          nabilfikrisp | Full Stack Developer
         </h1>
 
-        <h2 className="text-center text-2xl text-balance sm:text-start">
-          <span className="text-my-accent-green font-semibold">
-            nabilfikrisp
-          </span>{" "}
-          | Full Stack Developer
-        </h2>
+        <p className="font-heading text-center text-2xl text-balance sm:text-start">
+          Currently growing my{" "}
+          <strong className="text-my-accent-green font-semibold">
+            backend
+          </strong>
+          ,{" "}
+          <strong className="text-my-accent-green font-semibold">
+            database
+          </strong>
+          , and{" "}
+          <strong className="text-my-accent-green font-semibold">
+            system design
+          </strong>{" "}
+          skills.
+        </p>
         <div className="flex items-center justify-center sm:justify-start">
           <div className="bg-my-accent-green mr-2 rounded-sm p-1">
             <img
@@ -42,7 +51,7 @@ export function MainSection({ className }: MainSectionProps) {
         </div>
 
         <ul className="mt-2 flex justify-center gap-2 sm:justify-start">
-          <li className="bg-my-accent-green text-my-white flex h-8 items-center rounded-sm text-lg font-medium transition-transform duration-500 hover:-rotate-2">
+          <li className="bg-my-accent-green text-my-white flex h-8 items-center rounded-sm text-lg font-medium transition-transform duration-500 motion-safe:hover:-rotate-2">
             <Link
               href={RESUME_LINK}
               target="_blank"
@@ -64,7 +73,7 @@ export function MainSection({ className }: MainSectionProps) {
           {Object.values(EXTERNAL_LINKS).map((link, index) => (
             <li
               key={`${link.imgAlt}-${index}`}
-              className="h-8 w-8 transition-transform duration-500 hover:-rotate-12"
+              className="h-8 w-8 transition-transform duration-500 motion-safe:hover:-rotate-12"
             >
               <Link
                 href={link.href}

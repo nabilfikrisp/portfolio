@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div
         className={cn(
           "from-my-accent-green to-my-accent-orange border-b-my-accent-green flex aspect-video w-full items-center justify-center border-b bg-gradient-to-br",
-          "transition-all duration-500 group-hover/card:scale-105",
+          "motion-safe:roup-hover/card:scale-105 transition-all duration-500",
         )}
       >
         {project.imageUrl ? (
@@ -45,14 +45,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-my-paragraph/75 text-sm">{project.description}</p>
 
         {/* Skills Section */}
-        <div className="group/skills mb-2 flex flex-wrap gap-0 transition-all duration-500 hover:gap-2">
+        <div className="group/skills mb-2 flex flex-wrap gap-0 transition-all duration-500 motion-safe:hover:gap-2">
           {project.skills.map((skillSlug) => (
             <span
               key={`${skillSlug}-icon`}
               className={cn(
                 "bg-my-background -ml-2 flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border p-1 shadow-sm",
                 "first:ml-0",
-                "group-hover/skills:ml-0",
+                "motion-safe:group-hover/skills:ml-0",
                 "transition-all duration-500",
               )}
             >
@@ -72,7 +72,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Button
               asChild
               variant="brand-green"
-              className="duration-500 hover:-rotate-2"
+              className="duration-500 motion-safe:hover:-rotate-2"
             >
               <Link
                 href={project.liveUrl}
@@ -88,7 +88,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Button
               asChild
               variant="brand-orange"
-              className="duration-500 hover:-rotate-2"
+              className="duration-500 motion-safe:hover:-rotate-2"
             >
               <Link
                 href={project.sourceCodeUrl}

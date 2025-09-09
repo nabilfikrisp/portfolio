@@ -51,10 +51,10 @@ export function ExpereienceTabs() {
       </TabsList>
 
       <TabsContent value="work">
-        <WorkExperienceList className="animate-spring-left" />
+        <WorkExperienceList className="motion-safe:animate-spring-left" />
       </TabsContent>
       <TabsContent value="education">
-        <EducationHistoryList className="animate-spring-right" />
+        <EducationHistoryList className="motion-safe:animate-spring-right" />
       </TabsContent>
     </Tabs>
   );
