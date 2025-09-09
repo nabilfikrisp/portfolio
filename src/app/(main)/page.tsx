@@ -7,11 +7,11 @@ import { SkillsSection } from "@/components/sections/skills.section";
 export default function Home() {
   return (
     <div className="space-y-8 py-8">
-      <MainSection className="animate-spring-left" />
-      <AboutSection className="animate-spring-right" />
-      <ExperienceSection className="animate-spring-left" />
-      <SkillsSection className="animate-spring-right" />
-      <ProjectsSection className="animate-spring-left" />
+      <MainSection className="motion-safe:animate-spring-left" />
+      <AboutSection className="motion-safe:animate-spring-right" />
+      <ExperienceSection className="motion-safe:animate-spring-left" />
+      <SkillsSection className="motion-safe:animate-spring-right" />
+      <ProjectsSection className="motion-safe:animate-spring-left" />
     </div>
   );
 }

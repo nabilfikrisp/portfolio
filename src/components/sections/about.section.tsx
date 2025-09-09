@@ -13,11 +13,14 @@ export function AboutSection({ className }: AboutSectionProps) {
         About Me
       </h2>
       <p className="text-justify text-lg sm:text-xl">
-        I&apos;m a fullstack developer with 1+ years of experience building
-        user-focused web applications with React, Next.js, and Express/Nest.js.
-        While my strength is currently in frontend development, I&apos;m
-        actively expanding my backend and database skills to create more
-        complete and reliable systems.
+        Hello, my name is Muhammad{" "}
+        <strong className="text-my-accent-green">Nabil Fikri</strong> Sudjarpadi
+        Putra. I&apos;m a fullstack developer with{" "}
+        <strong className="text-my-accent-green">1+ years of experience</strong>{" "}
+        building user-focused web applications with React, Next.js, and
+        Express/Nest.js. While my strength is currently in frontend development,
+        I&apos;m actively expanding my backend, database, and system design
+        skills to create more complete and reliable systems.
       </p>
     </section>
   );
