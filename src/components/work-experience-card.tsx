@@ -45,7 +45,7 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         </h2>
 
         {/* Company, Employment Type, Date */}
-        <div className="text-my-paragraph/70 flex flex-col lg:flex-row lg:gap-2">
+        <div className="text-my-paragraph flex flex-col font-medium lg:flex-row lg:gap-2">
           <span>
             <span className="me-1 inline-block lg:hidden">-</span>
             {work.company}
@@ -63,11 +63,13 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         </div>
 
         {/* Description */}
-        <p className="font-medium">{work.description}</p>
+        <p className="text-my-paragraph-secondary font-medium">
+          {work.description}
+        </p>
 
         {/* Bullet list of descriptions */}
         {work.descriptionList.length > 0 && (
-          <ul className="text-my-paragraph/75 marker:text-my-accent-green list-outside list-disc space-y-1 pl-5 text-justify">
+          <ul className="text-my-paragraph-secondary marker:text-my-accent-green list-outside list-disc space-y-1 pl-5 text-justify">
             {work.descriptionList.map((item, idx) => (
               <li key={idx}>
                 {renderStringWithBold(item, {

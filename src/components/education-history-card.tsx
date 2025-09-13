@@ -48,7 +48,7 @@ export function EducationHistoryCard({
         </h2>
 
         {/* Institute, Date */}
-        <div className="text-my-paragraph/70 flex flex-col lg:flex-row lg:gap-2">
+        <div className="text-my-paragraph flex flex-col font-medium lg:flex-row lg:gap-2">
           <span>
             <span className="me-1 inline-block lg:hidden">-</span>
             {education.institute}

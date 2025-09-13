@@ -12,8 +12,8 @@ export function Footer() {
           <h3 className="text-my-accent-green font-heading text-xl font-semibold transition-transform lg:text-start">
             nabilfikrisp
           </h3>
-          <p className="text-muted-foreground text-sm">Full Stack Developer</p>
-          <p className="text-muted-foreground text-sm font-semibold">
+          <p className="text-sm font-medium">Full Stack Developer</p>
+          <p className="text-sm font-medium">
             <Link
               href="mailto:your.email@example.com"
               className="hover:underline"
@@ -44,7 +44,7 @@ export function Footer() {
         </ul>
       </address>
 
-      <div className="text-muted-foreground max-width-app mb-4 px-5 text-center text-sm">
+      <div className="text-my-paragraph max-width-app mb-4 px-5 text-center text-sm">
         <Separator className="bg-muted-foreground my-4" />
         <p className="motion-safe:animate-spring-left">
           © <time dateTime={currentYear.toString()}>{currentYear}</time>{" "}

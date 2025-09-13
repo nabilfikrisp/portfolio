@@ -29,10 +29,11 @@ export function ExpereienceTabs() {
         <TabsTrigger
           value="work"
           className={cn(
-            "text-my-white relative z-10 flex-1 text-center",
+            "text-my-primary-foreground relative z-10 flex-1 text-center",
             "hover:text-gray-200",
             // disable background and shadow for active tab
             "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
+            "dark:text-my-primary-foreground dark:data-[state=active]:bg-transparent",
           )}
         >
           Work
@@ -40,10 +41,11 @@ export function ExpereienceTabs() {
         <TabsTrigger
           value="education"
           className={cn(
-            "text-my-white relative z-10 flex-1 text-center",
+            "text-my-primary-foreground relative z-10 flex-1 text-center",
             "hover:text-gray-200",
             // disable background and shadow for active tab
             "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
+            "dark:text-my-primary-foreground dark:data-[state=active]:bg-transparent",
           )}
         >
           Education

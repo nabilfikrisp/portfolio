@@ -51,7 +51,7 @@ export function MainSection({ className }: MainSectionProps) {
         </div>
 
         <ul className="mt-2 flex justify-center gap-2 sm:justify-start">
-          <li className="bg-my-accent-green text-my-white flex h-8 items-center rounded-sm text-lg font-medium transition-transform duration-500 motion-safe:hover:-rotate-2">
+          <li className="bg-my-accent-green text-my-primary-foreground flex h-8 items-center rounded-sm text-lg font-medium transition-transform duration-500 motion-safe:hover:-rotate-2">
             <Link
               href={RESUME_LINK}
               target="_blank"
