@@ -1,6 +1,7 @@
 import { renderStringWithBold } from "@/lib/render-utils";
 import { WorkExperience } from "@/lib/type";
 import { cn } from "@/lib/utils";
+import { ExperienceImage } from "./experience-image";
 
 /**
  * WorkExperienceCard displays a single work experience entry.
@@ -10,26 +11,11 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
   return (
     <div className="group flex gap-5">
       {/* --- IMAGE & VERTICAL LINE SECTION --- */}
-      <div
-        className={cn("relative py-2", "group-first:pt-4", "group-last:pb-4")}
-      >
-        {/* Vertical timeline line */}
-        <div
-          className={cn(
-            "bg-my-accent-green absolute inset-y-0 left-1/2 z-0 w-[2px] -translate-x-1/2",
-            "group-first:top-1/2",
-            "group-last:bottom-1/2",
-          )}
-        />
-
-        {/* Company logo image */}
-        <img
-          className="border-my-accent-green bg-my-background relative z-10 aspect-square h-16 w-16 overflow-hidden rounded border object-scale-down lg:h-20 lg:w-20"
-          src={work.imageUrl}
-          title={work.company}
-          alt={work.company ? `${work.company} logo` : work.title}
-        />
-      </div>
+      <ExperienceImage
+        imageUrl={work.imageUrl}
+        name={work.company}
+        fallbackTitle={work.title}
+      />
 
       {/* --- DESCRIPTION SECTION --- */}
       <div

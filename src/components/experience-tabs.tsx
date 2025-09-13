@@ -2,9 +2,29 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { ComponentProps, ReactNode, useState } from "react";
 import { EducationHistoryList } from "./education-history-list";
 import { WorkExperienceList } from "./work-experience-list";
+
+type CustomTabTriggerProps = ComponentProps<typeof TabsTrigger> & {
+  children: ReactNode;
+};
+function CustomTabTrigger({ children, ...props }: CustomTabTriggerProps) {
+  return (
+    <TabsTrigger
+      {...props}
+      className={cn(
+        "text-my-primary-foreground relative z-10 flex-1 text-center",
+        "hover:text-gray-200",
+        // disable background and shadow for active tab
+        "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
+        "dark:text-my-primary-foreground dark:hover:text-my-paragraph-secondary dark:data-[state=active]:border-none dark:data-[state=active]:bg-transparent",
+      )}
+    >
+      {children}
+    </TabsTrigger>
+  );
+}
 
 export function ExpereienceTabs() {
   const [tab, setTab] = useState("work");
@@ -26,30 +46,8 @@ export function ExpereienceTabs() {
           )}
         />
 
-        <TabsTrigger
-          value="work"
-          className={cn(
-            "text-my-primary-foreground relative z-10 flex-1 text-center",
-            "hover:text-gray-200",
-            // disable background and shadow for active tab
-            "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
-            "dark:text-my-primary-foreground dark:data-[state=active]:bg-transparent",
-          )}
-        >
-          Work
-        </TabsTrigger>
-        <TabsTrigger
-          value="education"
-          className={cn(
-            "text-my-primary-foreground relative z-10 flex-1 text-center",
-            "hover:text-gray-200",
-            // disable background and shadow for active tab
-            "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
-            "dark:text-my-primary-foreground dark:data-[state=active]:bg-transparent",
-          )}
-        >
-          Education
-        </TabsTrigger>
+        <CustomTabTrigger value="work">Work</CustomTabTrigger>
+        <CustomTabTrigger value="education">Education</CustomTabTrigger>
       </TabsList>
 
       <TabsContent value="work">

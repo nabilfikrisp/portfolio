@@ -73,7 +73,10 @@ export function MainSection({ className }: MainSectionProps) {
           {Object.values(EXTERNAL_LINKS).map((link, index) => (
             <li
               key={`${link.imgAlt}-${index}`}
-              className="h-8 w-8 transition-transform duration-500 motion-safe:hover:-rotate-12"
+              className={cn(
+                "h-8 w-8 rounded-lg transition-transform duration-500 motion-safe:hover:-rotate-12",
+                "dark:bg-my-paragraph dark:p-1",
+              )}
             >
               <Link
                 href={link.href}
