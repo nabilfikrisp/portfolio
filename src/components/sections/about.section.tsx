@@ -12,7 +12,7 @@ export function AboutSection({ className }: AboutSectionProps) {
       <h2 className="text-my-headline text-2xl font-semibold sm:text-3xl">
         About Me
       </h2>
-      <p className="text-justify text-lg sm:text-xl">
+      <p className="text-justify text-lg leading-relaxed sm:text-xl">
         Hello, my name is Muhammad{" "}
         <strong className="text-my-accent-green">Nabil Fikri</strong> Sudjarpadi
         Putra. I&apos;m a fullstack developer with{" "}

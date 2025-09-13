@@ -275,7 +275,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading;
+    @apply font-heading text-my-headline;
   }
 
   code,
@@ -290,4 +290,70 @@
 
 @utility px-app {
   @apply px-4;
+}
+
+@layer components {
+  .markdown {
+    @apply text-my-paragraph text-lg leading-relaxed;
+  }
+
+  .markdown p,
+  .markdown ul,
+  .markdown ol,
+  .markdown blockquote {
+    @apply my-4 text-lg;
+  }
+
+  .markdown h2 {
+    @apply mt-8 mb-4 text-3xl leading-snug font-semibold;
+  }
+
+  .markdown h3 {
+    @apply mt-6 mb-4 text-2xl leading-snug font-medium;
+  }
+
+  /* Inline Code */
+  .markdown span.shiki {
+    @apply rounded px-1.5 py-0.5 font-mono text-base font-medium;
+  }
+
+  /* Code blocks */
+  .markdown pre {
+    @apply overflow-x-auto rounded-lg p-4 font-mono text-base leading-tight font-medium;
+  }
+
+  /* Links */
+  .markdown a {
+    @apply text-my-accent-green hover:underline;
+  }
+
+  /* Lists */
+  .markdown ul {
+    @apply list-inside list-disc;
+  }
+  .markdown ol {
+    @apply list-inside list-decimal;
+  }
+
+  /* Blockquotes */
+  .markdown blockquote {
+    @apply border-my-accent-green border-l-4 pl-4 text-gray-600 italic dark:text-gray-400;
+  }
+
+  /* Images */
+  .markdown img {
+    @apply my-4 max-w-full rounded-lg;
+  }
+
+  /* Tables */
+  .markdown table {
+    @apply my-6 w-full border-collapse;
+  }
+  .markdown th,
+  .markdown td {
+    @apply border border-gray-300 px-4 py-2 dark:border-gray-700;
+  }
+  .markdown th {
+    @apply bg-gray-200 font-semibold dark:bg-gray-800;
+  }
 }
