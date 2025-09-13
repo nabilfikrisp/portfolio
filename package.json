@@ -62,7 +62,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@shikijs/langs": "^3.12.2",
     "@shikijs/rehype": "^3.12.2",
+    "@shikijs/themes": "^3.12.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
