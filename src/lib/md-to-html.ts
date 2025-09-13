@@ -14,6 +14,7 @@ const highlighter = await createHighlighter({
   langs: [
     import("@shikijs/langs/javascript"),
     import("@shikijs/langs/typescript"),
+    import("@shikijs/langs/jsx"),
     import("@shikijs/langs/tsx"),
     import("@shikijs/langs/markdown"),
     import("@shikijs/langs/json"),
@@ -30,7 +31,13 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkParse)
     .use(remarkRehype)
     .use(() =>
-      rehypeShikiFromHighlighter(highlighter, { theme: "github-light" }),
+      rehypeShikiFromHighlighter(highlighter, {
+        inline: "tailing-curly-colon",
+        themes: {
+          light: "github-light",
+          dark: "tokyo-night",
+        },
+      }),
     )
     .use(rehypeStringify)
     .process(markdown);

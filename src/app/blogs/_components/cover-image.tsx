@@ -9,7 +9,6 @@ type CoverImageProps = {
 };
 
 export function CoverImage({ title, src, slug }: CoverImageProps) {
-  console.log(src, "SOURCE");
   const image = (
     <Image
       src={src}
