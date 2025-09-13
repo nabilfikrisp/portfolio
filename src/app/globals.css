@@ -314,6 +314,7 @@
 }
 
 @layer components {
+  /* MARK DOWN STYLING */
   .markdown {
     @apply text-my-paragraph text-lg leading-relaxed;
   }
@@ -342,6 +343,28 @@
   .markdown pre {
     @apply overflow-x-auto rounded-lg p-4 font-mono text-base leading-tight font-medium;
   }
+
+  /* Shiki Theme */
+  /* Dark mode */
+  html.dark .markdown pre.shiki {
+    background-color: var(--shiki-dark-bg) !important;
+    color: var(--shiki-dark) !important;
+  }
+
+  /* Inside Code Block */
+  html.dark .markdown pre.shiki span {
+    color: var(--shiki-dark) !important;
+  }
+
+  /* Inline */
+  html.dark .markdown span.shiki {
+    background-color: var(--shiki-dark-bg) !important;
+  }
+  html.dark .markdown span.shiki code span.line span {
+    color: #c0caf5 !important;
+  }
+
+  /* End of Shiki Theme */
 
   /* Links */
   .markdown a {
@@ -377,4 +400,5 @@
   .markdown th {
     @apply bg-gray-200 font-semibold dark:bg-gray-800;
   }
+  /* END OF MARKDOWN STYLING */
 }
