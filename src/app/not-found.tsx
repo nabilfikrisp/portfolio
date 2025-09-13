@@ -22,8 +22,8 @@ export default function NotFound() {
           </h2>
 
           <p className="font-heading max-w-md text-lg text-balance">
-            Looks like you've ventured into uncharted territory. The page you're
-            looking for doesn't exist in my{" "}
+            Looks like you&apos;ve ventured into uncharted territory. The page
+            you&apos;re looking for doesn&apos;t exist in my{" "}
             <strong className="text-my-accent-green font-semibold">
               digital space
             </strong>
