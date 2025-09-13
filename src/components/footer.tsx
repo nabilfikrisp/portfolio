@@ -1,4 +1,5 @@
 import { EMAIL, EXTERNAL_LINKS } from "@/lib/consts";
+import { cn } from "@/lib/utils";
 import { HeartIcon } from "lucide-react";
 import Link from "next/link";
 import { Separator } from "./ui/separator";
@@ -26,7 +27,10 @@ export function Footer() {
           {Object.values(EXTERNAL_LINKS).map((link, index) => (
             <li
               key={`${link.imgAlt}-${index}`}
-              className="h-8 w-8 transition-transform duration-500 motion-safe:hover:-rotate-12"
+              className={cn(
+                "h-8 w-8 transition-transform duration-500 motion-safe:hover:-rotate-12",
+                "dark:bg-my-paragraph-secondary dark:rounded-lg dark:p-1",
+              )}
             >
               <Link
                 href={link.href}
