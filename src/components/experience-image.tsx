@@ -17,8 +17,8 @@ export function ExperienceImage({
       <div
         className={cn(
           "bg-my-accent-green absolute inset-y-0 left-1/2 z-0 w-[2px] -translate-x-1/2",
-          "group-first:top-1/2",
-          "group-last:bottom-1/2",
+          "group-first:top-1/12 group-last:bottom-11/12",
+          "lg:group-first:top-1/2 lg:group-last:bottom-1/2",
         )}
       />
 
