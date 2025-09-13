@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { ThemeToggler } from "./theme-toggler";
 
 export function Navbar() {
   return (
@@ -21,7 +22,10 @@ export function Navbar() {
           nabilfikrisp
         </Link>
 
-        <ul className="ml-auto w-fit text-xl font-medium">
+        <ul className="ml-auto flex w-fit items-center gap-4 text-xl font-medium">
+          <li>
+            <ThemeToggler />
+          </li>
           <li
             className={cn(
               "text-my-accent-green font-heading hover:text-my-accent-green/70",

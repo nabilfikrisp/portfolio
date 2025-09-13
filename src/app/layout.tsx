@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { HOSTING_URL, PROFILE_PICTURE_URL } from "@/lib/consts";
 import type { Metadata } from "next";
 import {
@@ -69,11 +70,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <body
         className={`${outfit.variable} ${jakartaSans.variable} ${notoSerifGeorgian.variable} ${geistMono.variable}`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

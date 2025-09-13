@@ -52,6 +52,14 @@
   --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+
+  --my-background: #f8f5f2;
+  --my-headline: #232323;
+  --my-paragraph: #222525;
+  --my-paragraph-secondary: #475d5b;
+  --my-accent-green: #078080;
+  --my-accent-orange: #f45d48;
+  --my-primary-foreground: #fffffe;
 }
 
 .dark {
@@ -102,6 +110,14 @@
   --shadow-xl:
     0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18);
   --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
+
+  --my-background: #16161a;
+  --my-headline: #fffffe;
+  --my-paragraph: #f8f5f2;
+  --my-paragraph-secondary: #e6e1dc;
+  --my-accent-green: #0bb3b3;
+  --my-accent-orange: #f45d48;
+  --my-primary-foreground: #fffffe;
 }
 
 @theme inline {
@@ -158,12 +174,13 @@
   --shadow-2xl: var(--shadow-2xl);
 
   /* My Custom Theme */
-  --color-my-background: #f8f5f2;
-  --color-my-headline: #232323;
-  --color-my-paragraph: #222525;
-  --color-my-accent-green: #078080;
-  --color-my-accent-orange: #f45d48;
-  --color-my-white: #fffffe;
+  --color-my-background: var(--my-background);
+  --color-my-headline: var(--my-headline);
+  --color-my-paragraph: var(--my-paragraph);
+  --color-my-paragraph-secondary: var(--my-paragraph-secondary);
+  --color-my-accent-green: var(--my-accent-green);
+  --color-my-accent-orange: var(--my-accent-orange);
+  --color-my-primary-foreground: var(--my-primary-foreground);
 
   /* Spring-like horizontal slide animations */
   --animate-spring-left: spring-left 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
@@ -278,6 +295,10 @@
     @apply font-heading text-my-headline;
   }
 
+  p {
+    @apply text-my-paragraph;
+  }
+
   code,
   pre {
     @apply font-mono;
@@ -293,6 +314,7 @@
 }
 
 @layer components {
+  /* MARK DOWN STYLING */
   .markdown {
     @apply text-my-paragraph text-lg leading-relaxed;
   }
@@ -319,8 +341,29 @@
 
   /* Code blocks */
   .markdown pre {
-    @apply overflow-x-auto rounded-lg p-4 font-mono text-base leading-tight font-medium;
+    @apply overflow-x-auto rounded-lg p-4 font-mono text-base font-medium;
   }
+
+  /* Shiki Theme */
+  /* Dark mode */
+  html.dark .markdown pre.shiki {
+    background-color: var(--shiki-dark-bg) !important;
+    color: var(--shiki-dark) !important;
+  }
+
+  /* Inside Code Block */
+  html.dark .markdown pre.shiki span {
+    color: var(--shiki-dark) !important;
+  }
+
+  /* Inline */
+  html.dark .markdown span.shiki {
+    background-color: var(--shiki-dark-bg) !important;
+  }
+  html.dark .markdown span.shiki code span.line span {
+    color: #c0caf5 !important;
+  }
+  /* End of Shiki Theme */
 
   /* Links */
   .markdown a {
@@ -356,4 +399,5 @@
   .markdown th {
     @apply bg-gray-200 font-semibold dark:bg-gray-800;
   }
+  /* END OF MARKDOWN STYLING */
 }

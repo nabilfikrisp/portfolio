@@ -42,7 +42,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="text-xl leading-[24px] font-semibold capitalize">
           {project.title}
         </h3>
-        <p className="text-my-paragraph/75 text-sm">{project.description}</p>
+        <p className="text-my-paragraph-secondary text-sm">
+          {project.description}
+        </p>
 
         {/* Skills Section */}
         <div className="group/skills mb-2 flex flex-wrap gap-0 transition-all duration-500 motion-safe:hover:gap-2">
@@ -54,6 +56,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 "first:ml-0",
                 "motion-safe:group-hover/skills:ml-0",
                 "transition-all duration-500",
+                "dark:bg-my-paragraph-secondary dark:border-transparent",
               )}
             >
               <img

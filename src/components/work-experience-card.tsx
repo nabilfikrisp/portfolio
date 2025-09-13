@@ -1,6 +1,7 @@
 import { renderStringWithBold } from "@/lib/render-utils";
 import { WorkExperience } from "@/lib/type";
 import { cn } from "@/lib/utils";
+import { ExperienceImage } from "./experience-image";
 
 /**
  * WorkExperienceCard displays a single work experience entry.
@@ -10,26 +11,11 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
   return (
     <div className="group flex gap-5">
       {/* --- IMAGE & VERTICAL LINE SECTION --- */}
-      <div
-        className={cn("relative py-2", "group-first:pt-4", "group-last:pb-4")}
-      >
-        {/* Vertical timeline line */}
-        <div
-          className={cn(
-            "bg-my-accent-green absolute inset-y-0 left-1/2 z-0 w-[2px] -translate-x-1/2",
-            "group-first:top-1/2",
-            "group-last:bottom-1/2",
-          )}
-        />
-
-        {/* Company logo image */}
-        <img
-          className="border-my-accent-green bg-my-background relative z-10 aspect-square h-16 w-16 overflow-hidden rounded border object-scale-down lg:h-20 lg:w-20"
-          src={work.imageUrl}
-          title={work.company}
-          alt={work.company ? `${work.company} logo` : work.title}
-        />
-      </div>
+      <ExperienceImage
+        imageUrl={work.imageUrl}
+        name={work.company}
+        fallbackTitle={work.title}
+      />
 
       {/* --- DESCRIPTION SECTION --- */}
       <div
@@ -45,7 +31,7 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         </h2>
 
         {/* Company, Employment Type, Date */}
-        <div className="text-my-paragraph/70 flex flex-col lg:flex-row lg:gap-2">
+        <div className="text-my-paragraph flex flex-col font-medium lg:flex-row lg:gap-2">
           <span>
             <span className="me-1 inline-block lg:hidden">-</span>
             {work.company}
@@ -63,11 +49,13 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         </div>
 
         {/* Description */}
-        <p className="font-medium">{work.description}</p>
+        <p className="text-my-paragraph-secondary font-medium">
+          {work.description}
+        </p>
 
         {/* Bullet list of descriptions */}
         {work.descriptionList.length > 0 && (
-          <ul className="text-my-paragraph/75 marker:text-my-accent-green list-outside list-disc space-y-1 pl-5 text-justify">
+          <ul className="text-my-paragraph-secondary marker:text-my-accent-green list-outside list-disc space-y-1 pl-5 text-justify">
             {work.descriptionList.map((item, idx) => (
               <li key={idx}>
                 {renderStringWithBold(item, {

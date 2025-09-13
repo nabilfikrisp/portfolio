@@ -19,7 +19,10 @@ export function SkillsSection({ className }: SkillsSectionProps) {
         {SKILLS.map((skill) => (
           <div
             key={skill.slug}
-            className="bg-my-background border-my-accent-green flex items-center gap-2 rounded-md border px-3 py-2"
+            className={cn(
+              "bg-my-background border-my-accent-green text-my-paragraph flex items-center gap-2 rounded-md border px-3 py-2",
+              "dark:bg-my-accent-green dark:border-transparent",
+            )}
           >
             <img
               src={skill.iconUrl}
