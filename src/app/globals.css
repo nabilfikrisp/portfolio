@@ -361,7 +361,7 @@
     background-color: var(--shiki-dark-bg) !important;
   }
   html.dark .markdown span.shiki code span.line span {
-    color: #c0caf5 !important;
+    color: var(--shiki-dark) !important;
   }
   /* End of Shiki Theme */
 

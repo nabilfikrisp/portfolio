@@ -30,15 +30,13 @@ export default async function markdownToHtml(markdown: string) {
   const result = await unified()
     .use(remarkParse)
     .use(remarkRehype)
-    .use(() =>
-      rehypeShikiFromHighlighter(highlighter, {
-        inline: "tailing-curly-colon",
-        themes: {
-          light: "github-light",
-          dark: "tokyo-night",
-        },
-      }),
-    )
+    .use(rehypeShikiFromHighlighter, highlighter, {
+      inline: "tailing-curly-colon",
+      themes: {
+        light: "github-light",
+        dark: "tokyo-night",
+      },
+    })
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();
