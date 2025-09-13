@@ -22,7 +22,7 @@ Bonus: since everything is pre-rendered to HTML, I can **deploy this anywhere fo
 
 ## Front Matter and Markdown Posts
 
-In my `_posts` folder, every Markdown file starts with **front matter**. Front matter is a small block at the top of the file, surrounded by `---`, which holds **metadata about the post** like title, date, and cover image.
+In my `_posts{:ts}` folder, every Markdown file starts with **front matter**. Front matter is a small block at the top of the file, surrounded by `---{:md}`, which holds **metadata about the post** like title, date, and cover image.
 
 Example:
 
@@ -33,12 +33,12 @@ date: "2025-09-09"
 ---
 ```
 
-Everything after the second `---` is the actual content of the post.
+Everything after the second `---{:md}` is the actual content of the post.
 
-I use **`gray-matter`** to read this front matter in Node.js. It parses the Markdown file into two parts:
+I use **`gray-matter{:ts}`** to read this front matter in Node.js. It parses the Markdown file into two parts:
 
-- `data` → the metadata object (title, date, etc.)
-- `content` → the raw Markdown content
+- `data{:ts}` → the metadata object (title, date, etc.)
+- `content{:ts}` → the raw Markdown content
 
 Example in code:
 
@@ -61,8 +61,8 @@ This way, I can **keep all my posts organized as Markdown**, and still have all 
 
 - **Next.js (App Router)** handles file-based routing, layouts, and pre-rendering.
 - **Gray Matter** to read front matter from Markdown files.
-- **One central `_posts` folder** with all my `.md` files. Keeps it simple and tidy.
-- **`markdownToHtml` helper** to convert Markdown into HTML for rendering pages.
+- **One central `_posts{:ts}` folder** with all my `.md{:ts}` files. Keeps it simple and tidy.
+- **`markdownToHtml{:ts}` helper** to convert Markdown into HTML for rendering pages.
 
 Here’s the function I use for Markdown → HTML:
 
@@ -91,7 +91,7 @@ Output:
 <p>This is my post.</p>
 ```
 
-Now all my posts are `.md` files. I can **parse front matter, convert Markdown to HTML, and generate static pages**. Keeps everything **organized, fast, and simple**.
+Now all my posts are `.md{:ts}` files. I can **parse front matter, convert Markdown to HTML, and generate static pages**. Keeps everything **organized, fast, and simple**.
 
 ---
 
@@ -157,13 +157,13 @@ export async function generateStaticParams() {
 
 ### What’s happening here:
 
-1. **`getPostBySlug`** → reads the Markdown file and front matter for the requested slug.
-2. **`markdownToHtml`** → converts the Markdown content into HTML.
-3. **`PostHeader` and `PostBody`** → render the metadata and HTML in React components.
-4. **`generateStaticParams`** → tells Next.js which slugs to pre-render at build time.
-5. **`generateMetadata`** → creates dynamic page metadata for SEO and social sharing.
+1. **`getPostBySlug{:ts}`** → reads the Markdown file and front matter for the requested slug.
+2. **`markdownToHtml{:ts}`** → converts the Markdown content into HTML.
+3. **`PostHeader{:ts}`** and **`PostBody{:ts}`** → render the metadata and HTML in React components.
+4. **`generateStaticParams{:ts}`** → tells Next.js which slugs to pre-render at build time.
+5. **`generateMetadata{:ts}`** → creates dynamic page metadata for SEO and social sharing.
 
-All together, this is how **my `_posts` folder + gray-matter + markdownToHtml + Next.js App Router** produces fully **static, pre-rendered blog pages**.
+All together, this is how **my `_posts{:ts}` folder + gray-matter + markdownToHtml + Next.js App Router** produces fully **static, pre-rendered blog pages**.
 
 It’s satisfying to see Markdown files turn into real pages on the web, and all of it is **static**.
 
@@ -175,7 +175,7 @@ Even as a frontend dev, it’s nice to see **how everything comes together** in 
 
 ## Reference
 
-Everything in this setup, `_posts` Markdown files, front matter with `gray-matter`, and the `markdownToHtml` inspired by the **official Next.js blog starter example**.
+Everything in this setup, `_posts{:ts}` Markdown files, front matter with `gray-matter{:ts}`, and the `markdownToHtml{:ts}` inspired by the **official Next.js blog starter example**.
 
 If you want to see the source and how it’s structured, check it out here: [Next.js Blog Starter Repo](https://github.com/vercel/next.js/tree/canary/examples/blog-starter)
 
