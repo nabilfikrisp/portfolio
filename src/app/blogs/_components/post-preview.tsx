@@ -32,7 +32,7 @@ export function PostPreview({
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
         <Link
-          href={`/posts/${slug}`}
+          href={`/blogs/${slug}`}
           className="hover:underline"
         >
           {title}
