@@ -2,16 +2,17 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { HOSTING_URL, PROFILE_PICTURE_URL } from "@/lib/consts";
 import type { Metadata } from "next";
 import {
-  Geist_Mono,
+  JetBrains_Mono,
   Noto_Serif_Georgian,
   Outfit,
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const outfit = Outfit({
@@ -26,8 +27,8 @@ const jakartaSans = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const notoSerifGeorgian = Noto_Serif_Georgian({
-  variable: "--font-noto-serif-georgian",
+const serif = Noto_Serif_Georgian({
+  variable: "--font-serif",
   subsets: ["latin"],
   display: "swap",
 });
@@ -75,7 +76,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className={`${outfit.variable} ${jakartaSans.variable} ${notoSerifGeorgian.variable} ${geistMono.variable}`}
+        className={`${outfit.variable} ${jakartaSans.variable} ${serif.variable} ${jetBrainsMono.variable}`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
