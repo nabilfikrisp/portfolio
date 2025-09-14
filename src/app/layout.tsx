@@ -34,20 +34,22 @@ const serif = Noto_Serif_Georgian({
 });
 
 export const metadata: Metadata = {
-  title: "nabilfikrisp - Fullstack Developer",
+  metadataBase: new URL(HOSTING_URL),
+  title: "nabilfikrisp - Full Stack Developer",
   description:
     "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
   openGraph: {
-    title: "nabilfikrisp - Fullstack Developer",
+    title: "nabilfikrisp - Full Stack Developer",
     description:
       "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
     type: "website",
     url: HOSTING_URL,
+    siteName: "nabilfikrisp",
     images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
   },
   twitter: {
     card: "summary_large_image",
-    title: "nabilfikrisp - Fullstack Developer",
+    title: "nabilfikrisp - Full Stack Developer",
     description:
       "nabilfikrisp's portfolio showcases frontend expertise in React, Next.js, and TypeScript, with dynamic projects and growing full-stack skills.",
     images: `${HOSTING_URL}${PROFILE_PICTURE_URL}`,
@@ -59,6 +61,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   verification: {
     google: "X6_NL2Lyr2W5newcTslUX_5i02rqC_7vLw6hsxe57o8",
