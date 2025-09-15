@@ -1,16 +1,16 @@
-import { Author } from "@/lib/type";
+import { Post } from "@/lib/type";
 import Link from "next/link";
 import { Avatar } from "./avatar";
 import { CoverImage } from "./cover-image";
 import { DateFormatter } from "./date-formatter";
 
 type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  excerpt: string;
-  author: Author;
-  slug: string;
+  title: Post["title"];
+  coverImage: Post["coverImage"];
+  date: Post["date"];
+  excerpt: Post["excerpt"];
+  author: Post["author"];
+  slug: Post["slug"];
 };
 
 export function HeroPost({

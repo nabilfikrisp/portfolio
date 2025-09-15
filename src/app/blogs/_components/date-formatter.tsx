@@ -1,10 +1,11 @@
+import { Post } from "@/lib/type";
 import { format, parseISO } from "date-fns";
 
 type DateFormatterProps = {
-  dateString: string;
+  dateString: Post["date"];
 };
 
 export function DateFormatter({ dateString }: DateFormatterProps) {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL	d, yyyy")}</time>;
+  return <time dateTime={dateString}>{format(date, "d LLLL yyyy")}</time>;
 }

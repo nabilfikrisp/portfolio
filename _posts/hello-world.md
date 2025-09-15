@@ -2,7 +2,7 @@
 title: "Hello World"
 excerpt: "The first note in my learning documentation about software engineering."
 coverImage: "/assets/blogs/hello-world/cover.webp"
-date: "2025-09-09T12:00:00.000Z"
+date: "2025-09-08T12:00:00.000Z"
 author:
   name: "nabilfikrisp"
   picture: "/assets/profile.png"

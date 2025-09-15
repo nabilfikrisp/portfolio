@@ -1,11 +1,12 @@
+import { Post } from "@/lib/type";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 type CoverImageProps = {
-  title: string;
-  src: string;
-  slug?: string;
+  title: Post["title"];
+  src: Post["coverImage"];
+  slug?: Post["slug"];
 };
 
 export function CoverImage({ title, src, slug }: CoverImageProps) {

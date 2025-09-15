@@ -5,6 +5,12 @@ import { notFound } from "next/navigation";
 import { PostBody } from "../_components/post-body";
 import { PostHeader } from "../_components/post-header";
 
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
 export default async function Post(props: Params) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -13,10 +19,10 @@ export default async function Post(props: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post.content);
 
   return (
-    <article>
+    <article className="flex flex-1 flex-col">
       <PostHeader
         title={post.title}
         coverImage={post.coverImage}
@@ -27,12 +33,6 @@ export default async function Post(props: Params) {
     </article>
   );
 }
-
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
@@ -46,6 +46,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 
   return {
     title,
+    description: post.excerpt,
     openGraph: {
       title,
       images: [post.ogImage.url],
