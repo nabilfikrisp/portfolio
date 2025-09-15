@@ -1,13 +1,13 @@
 ---
 title: "Syntax Highlight with shiki"
 excerpt: "Adding beautiful, performant code highlighting to your Next.js SSG blog with Shiki"
-coverImage: "/assets/blogs/hello-world/cover.webp"
+coverImage: "/assets/blogs/syntax-highlight-with-shiki/cover.webp"
 date: "2025-09-15T12:00:00.000Z"
 author:
   name: "nabilfikrisp"
   picture: "/assets/profile.png"
 ogImage:
-  url: "/assets/blogs/hello-world/cover.webp"
+  url: "/assets/blogs/syntax-highlight-with-shiki/cover.webp"
 ---
 
 After [building my SSG blog with Next.js and Markdown](/blogs/markdown-based-ssg), I needed proper syntax highlighting for code blocks. Plain text code looks unprofessional and hurts readability. Enter Shiki, the same highlighter that powers VS Code.
