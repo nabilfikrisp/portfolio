@@ -9,7 +9,7 @@ import { unified } from "unified";
 const highlighter = await createHighlighter({
   themes: [
     import("@shikijs/themes/github-light"),
-    import("@shikijs/themes/tokyo-night"),
+    import("@shikijs/themes/github-dark"),
   ],
   langs: [
     import("@shikijs/langs/javascript"),
@@ -34,7 +34,7 @@ export default async function markdownToHtml(markdown: string) {
       inline: "tailing-curly-colon",
       themes: {
         light: "github-light",
-        dark: "tokyo-night",
+        dark: "github-dark",
       },
     })
     .use(rehypeStringify)

@@ -13,10 +13,10 @@ export default async function Post(props: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post.content);
 
   return (
-    <article>
+    <article className="flex flex-1 flex-col">
       <PostHeader
         title={post.title}
         coverImage={post.coverImage}
