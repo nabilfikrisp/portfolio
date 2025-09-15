@@ -20,19 +20,19 @@ export function PostHeader({
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="mb-8 sm:mx-0 md:mb-16">
+      <div className="mb-6 sm:mx-0 md:mb-12">
         <CoverImage
           title={title}
           src={coverImage}
         />
       </div>
-      <div className="b mb-6">
+      <div className="b mb-4 md:mb-6">
         <Avatar
           name={author.name}
           picture={author.picture}
         />
       </div>
-      <div className="font-heading mb-6 text-lg font-semibold">
+      <div className="font-heading mb-4 text-lg font-semibold md:mb-6">
         <DateFormatter dateString={date} />
       </div>
     </>
