@@ -184,4 +184,4 @@ Choose SSG when you want developer-friendly content management, exceptional perf
 ## References
 
 - [Next.js Blog Starter Repo](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) - Official example that demonstrates these patterns
-- [My implementation](https://github.com/nabilfikrisp/your-repo-name) - Working code for this blog
+- [My implementation](https://github.com/nabilfikrisp/portfolio) - Working code for this blog
