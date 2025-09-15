@@ -1,6 +1,8 @@
+import { Author } from "@/lib/type";
+
 type AvatarProps = {
-  name: string;
-  picture: string;
+  name: Author["name"];
+  picture: Author["picture"];
 };
 
 export function Avatar({ name, picture }: AvatarProps) {

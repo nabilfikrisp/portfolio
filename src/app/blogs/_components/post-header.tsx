@@ -1,14 +1,14 @@
-import { Author } from "@/lib/type";
+import { Post } from "@/lib/type";
 import { Avatar } from "./avatar";
 import { CoverImage } from "./cover-image";
 import { DateFormatter } from "./date-formatter";
 import { PostTitle } from "./post-title";
 
 type PostHeaderProps = {
-  title: string;
-  date: string;
-  author: Author;
-  coverImage: string;
+  title: Post["title"];
+  date: Post["date"];
+  author: Post["author"];
+  coverImage: Post["coverImage"];
 };
 
 export function PostHeader({

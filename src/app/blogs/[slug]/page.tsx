@@ -5,6 +5,12 @@ import { notFound } from "next/navigation";
 import { PostBody } from "../_components/post-body";
 import { PostHeader } from "../_components/post-header";
 
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
 export default async function Post(props: Params) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -28,12 +34,6 @@ export default async function Post(props: Params) {
   );
 }
 
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
@@ -46,6 +46,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 
   return {
     title,
+    description: post.excerpt,
     openGraph: {
       title,
       images: [post.ogImage.url],

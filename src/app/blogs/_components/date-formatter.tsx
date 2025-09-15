@@ -1,7 +1,8 @@
+import { Post } from "@/lib/type";
 import { format, parseISO } from "date-fns";
 
 type DateFormatterProps = {
-  dateString: string;
+  dateString: Post["date"];
 };
 
 export function DateFormatter({ dateString }: DateFormatterProps) {
