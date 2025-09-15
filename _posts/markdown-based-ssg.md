@@ -100,7 +100,7 @@ This works because `remark{:bash}` parses Markdown into AST, then `remark-html{:
 
 ## Understanding the Trade-offs
 
-### ✅ What You Gain
+### What You Gain
 
 **Performance benefits:**
 
@@ -118,7 +118,7 @@ This works because `remark{:bash}` parses Markdown into AST, then `remark-html{:
 - No database setup or maintenance
 - Local development without external dependencies
 
-### ❌ What You Give Up
+### What You Give Up
 
 **Dynamic limitations:**
 
@@ -135,7 +135,7 @@ This works because `remark{:bash}` parses Markdown into AST, then `remark-html{:
 - Small typo fixes trigger entire site rebuilds
 - Memory usage during builds can be substantial
 
-### 🤔 When This Approach Shines
+### When This Approach Shines
 
 **Perfect for:**
 
