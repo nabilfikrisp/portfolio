@@ -1,5 +1,5 @@
 import { HOSTING_URL, PROFILE_PICTURE_URL } from "@/lib/consts";
-import { getAllPosts } from "@/lib/post-api";
+import { postService } from "@/lib/post";
 import { Metadata } from "next";
 import { PostList } from "./_components/post-list";
 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const allPosts = getAllPosts();
+  const allPosts = postService.getAllPosts();
 
   return (
     <div className="max-width-app mx-auto flex w-full flex-1 flex-col items-center justify-center py-8">

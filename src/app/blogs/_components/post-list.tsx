@@ -1,4 +1,4 @@
-import { Post } from "@/lib/type";
+import { Post } from "@/lib/types";
 import Link from "next/link";
 import { DateFormatter } from "./date-formatter";
 

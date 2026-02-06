@@ -1,5 +1,5 @@
 import markdownToHtml from "@/lib/md-to-html";
-import { getAllPosts, getPostBySlug } from "@/lib/post-api";
+import { postService } from "@/lib/post";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PostBody } from "../_components/post-body";
@@ -13,7 +13,7 @@ type Params = {
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = postService.getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
@@ -36,7 +36,7 @@ export default async function Post(props: Params) {
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
-  const post = getPostBySlug(params.slug);
+  const post = postService.getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
@@ -55,9 +55,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const allPosts = postService.getAllPosts();
 
-  return posts.map((post) => ({
+  return allPosts.map((post) => ({
     slug: post.slug,
   }));
 }

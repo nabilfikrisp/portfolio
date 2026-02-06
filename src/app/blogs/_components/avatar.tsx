@@ -1,4 +1,4 @@
-import { Author } from "@/lib/type";
+import { Author } from "@/lib/types";
 
 type AvatarProps = {
   name: Author["name"];

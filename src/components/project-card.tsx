@@ -1,4 +1,4 @@
-import { Project } from "@/lib/type";
+import { Project } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { CodeIcon, ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";

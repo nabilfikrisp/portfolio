@@ -1,4 +1,4 @@
-import { Post } from "@/lib/type";
+import { Post } from "@/lib/types";
 
 type Props = {
   content: Post["content"];

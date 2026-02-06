@@ -1,4 +1,4 @@
-import { Post } from "@/lib/type";
+import { Post } from "@/lib/types";
 import { format, parseISO } from "date-fns";
 
 type DateFormatterProps = {

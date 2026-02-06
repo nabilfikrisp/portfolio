@@ -1,4 +1,4 @@
-import { EducationHistory } from "@/lib/type";
+import { EducationHistory } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { ExperienceImage } from "./experience-image";
 

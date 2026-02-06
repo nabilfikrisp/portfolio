@@ -1,5 +1,5 @@
 import { renderStringWithBold } from "@/lib/render-utils";
-import { WorkExperience } from "@/lib/type";
+import { WorkExperience } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import { ExperienceImage } from "./experience-image";
 
