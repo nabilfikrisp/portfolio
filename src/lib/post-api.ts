@@ -1,5 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
+import yaml from "js-yaml";
 import { join } from "path";
 import { Post } from "./type";
 
@@ -13,7 +14,14 @@ export function getPostBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const { data, content } = matter(fileContents, {
+    engines: {
+      yaml: {
+        parse: (str: string) => yaml.load(str) as object,
+        stringify: (obj) => yaml.dump(obj),
+      },
+    },
+  });
 
   return { ...data, slug: realSlug, content } as Post;
 }
