@@ -1,4 +1,4 @@
-export interface PostRepository {
+export interface PostInterface {
   getAllPosts(): Post[];
   getPostBySlug(slug: string): Post;
   getPostSlugs(): string[];

@@ -2,5 +2,5 @@ import { PostService } from "./service";
 
 export const postService = new PostService();
 
-export { PostNotFoundError } from "./repository";
-export type { Post, PostRepository } from "./repository";
+export { PostNotFoundError } from "./interface";
+export type { Post, PostInterface } from "./interface";

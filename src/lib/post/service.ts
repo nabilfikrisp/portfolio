@@ -2,11 +2,11 @@ import fs from "fs";
 import matter from "gray-matter";
 import yaml from "js-yaml";
 import { join } from "path";
-import { Post, PostNotFoundError, PostRepository } from "./repository";
+import { Post, PostInterface, PostNotFoundError } from "./interface";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-export class PostService implements PostRepository {
+export class PostService implements PostInterface {
   private parseFrontmatter(content: string) {
     return matter(content, {
       engines: {
