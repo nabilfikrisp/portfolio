@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div
         className={cn(
           "from-my-accent-green to-my-accent-orange border-b-my-accent-green flex aspect-video w-full items-center justify-center border-b bg-gradient-to-br",
-          "motion-safe:roup-hover/card:scale-105 transition-all duration-500",
+          "transition-all duration-500 motion-safe:group-hover/card:scale-105",
         )}
       >
         {project.imageUrl ? (

@@ -26,7 +26,7 @@ export function CoverImage({ title, src, slug }: CoverImageProps) {
     <div className="sm:mx-0">
       {slug ? (
         <Link
-          href={`/posts/${slug}`}
+          href={`/blogs/${slug}`}
           aria-label={title}
         >
           {image}

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ExpereienceTabs } from "../experience-tabs";
+import { ExperienceTabs } from "../experience-tabs";
 
 type ExperienceSectionProps = {
   className?: string;
@@ -11,7 +11,7 @@ export function ExperienceSection({ className }: ExperienceSectionProps) {
       className={cn("max-width-app w-full space-y-4", className)}
     >
       <h2 className="text-my-headline text-3xl font-semibold">Experience</h2>
-      <ExpereienceTabs />
+      <ExperienceTabs />
     </section>
   );
 }

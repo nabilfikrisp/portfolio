@@ -26,7 +26,7 @@ function CustomTabTrigger({ children, ...props }: CustomTabTriggerProps) {
   );
 }
 
-export function ExpereienceTabs() {
+export function ExperienceTabs() {
   const [tab, setTab] = useState("work");
 
   function onTabChange(value: string) {

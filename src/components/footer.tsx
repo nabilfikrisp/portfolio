@@ -16,7 +16,7 @@ export function Footer() {
           <p className="text-sm font-medium">Full Stack Developer</p>
           <p className="text-sm font-medium">
             <Link
-              href="mailto:your.email@example.com"
+              href={`mailto:${EMAIL}`}
               className="hover:underline"
             >
               {EMAIL}

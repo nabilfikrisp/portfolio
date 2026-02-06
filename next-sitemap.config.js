@@ -5,7 +5,7 @@ module.exports = {
   sitemapSize: 5000,
   changefreq: "monthly",
   priority: 0.8,
-  additionalPaths: async (config) => [
+  additionalPaths: async () => [
     // Optional: If you have extra static paths, add them; not needed for your 3 pages
   ],
   transform: async (config, path) => {
