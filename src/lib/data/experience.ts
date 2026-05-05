@@ -2,6 +2,20 @@ import type { EducationHistory, WorkExperience } from "../types/experience";
 
 export const WORKS: WorkExperience[] = [
   {
+    imageUrl: "/assets/experiences/works/datacakra.png",
+    title: "Frontend Engineer",
+    company: "Datacakra",
+    employmentType: "Contracted to Bank BTN",
+    date: "Oct 2025 - Present",
+    description:
+      "Worked on Bank BTN mobile banking integrations through Datacakra, focusing on React WebViews, biometric SDK abstraction, and Express.js API adapters.",
+    descriptionList: [
+      "Developed React-based mobile banking WebViews for direct third-party app integration.",
+      "Developed a React abstraction layer for biometric SDKs to simplify vendor integration and ensure future-proof vendor integration.",
+      "Built Express.js adapters to transform legacy banking strings into standardized RESTful API responses.",
+    ],
+  },
+  {
     imageUrl: "/assets/experiences/works/octoscript.png",
     title: "Frontend Developer",
     company: "Octoscript",

@@ -46,7 +46,7 @@ export function MainSection({ className }: MainSectionProps) {
             />
           </div>
           <p className="text-base font-medium sm:text-lg">
-            Bandung, West Java, Indonesia
+            South Jakarta, DKI Jakarta, Indonesia
           </p>
         </div>
 

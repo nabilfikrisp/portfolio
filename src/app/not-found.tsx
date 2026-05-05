@@ -58,7 +58,7 @@ export default function NotFound() {
                 height={24}
               />
             </div>
-            <p className="text-base font-medium">Still in Bandung, West Java</p>
+            <p className="text-base font-medium">Still in South Jakarta, DKI Jakarta</p>
           </div>
         </div>
 

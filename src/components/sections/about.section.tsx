@@ -14,9 +14,11 @@ export function AboutSection({ className }: AboutSectionProps) {
       </h2>
       <p className="text-justify text-lg leading-relaxed sm:text-xl">
         Hello, my name is Muhammad{" "}
-        <strong className="text-my-accent-green">Nabil Fikri</strong> Sudjarpadi
-        Putra. I&apos;m a fullstack developer with{" "}
-        <strong className="text-my-accent-green">1+ years of experience</strong>{" "}
+        <strong className="text-my-accent-green">Nabil Fikri</strong>
+        &nbsp;Sudjarpadi Putra. I&apos;m a fullstack developer with{" "}
+        <strong className="text-my-accent-green">
+          1+ years of experience
+        </strong>{" "}
         building user-focused web applications with React, Next.js, and
         Express/Nest.js. While my strength is currently in frontend development,
         I&apos;m actively expanding my backend, database, and system design

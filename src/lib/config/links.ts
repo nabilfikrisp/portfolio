@@ -1,7 +1,8 @@
 export const HOSTING_URL = "https://nabilfikrisp.pages.dev";
 export const PROFILE_PICTURE_URL = "/assets/profile.png";
 export const EMAIL = "mnabilfikrisp@gmail.com";
-export const RESUME_LINK = "/assets/resume.pdf";
+export const RESUME_LINK =
+  "/assets/Resume-M_Nabil_Fikri_S_P-Fullstack_Developer.pdf";
 
 export const EXTERNAL_LINKS = {
   LINKED_IN: {
