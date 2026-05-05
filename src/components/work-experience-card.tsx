@@ -49,7 +49,7 @@ export function WorkExperienceCard({ work }: { work: WorkExperience }) {
         </div>
 
         {/* Description */}
-        <p className="text-my-paragraph-secondary font-medium">
+        <p className="text-my-paragraph-secondary font-semibold pt-2 py-3">
           {work.description}
         </p>
 

@@ -19,13 +19,14 @@ export const WORKS: WorkExperience[] = [
     imageUrl: "/assets/experiences/works/octoscript.png",
     title: "Frontend Developer",
     company: "Octoscript",
-    employmentType: "Freelance",
+    employmentType: "Project Based",
     date: "Oct 2024 - Feb 2025",
-    description: "Built the frontend of Twostrap.id using Next.js",
+    description:
+      "Led the end-to-end frontend development of Twostrap.id using Next.js, focusing on hybrid rendering, secure authentication, and seamless backend integration.",
     descriptionList: [
-      "Delivered features on time with tight deadlines.",
-      "Worked with the backend lead on API design, enabling seamless frontend integration.",
-      "Created and documented complex React components, improving maintainability and team collaboration.",
+      "Engineered Twostrap.id using Next.js with a hybrid rendering approach (SSR for SEO-critical pages and SPA for secure checkout flows).",
+      "Implemented secure HttpOnly cookie authentication with cross-domain integration to effectively mitigate XSS risks.",
+      "Collaborated with the backend lead on API design and documented complex React components, ensuring maintainability and fast feature delivery.",
     ],
   },
   {
@@ -34,18 +35,19 @@ export const WORKS: WorkExperience[] = [
     company: "Dicoding Indonesia",
     employmentType: "Part-time",
     date: "Feb 2024 - Aug 2024",
-    description: "Mentored a class of 23 React.JS students",
+    description:
+      "Provided technical mentorship, code reviews, and architectural guidance for a cohort of React.js students, ensuring successful completion of their Developer learning paths.",
     descriptionList: [
-      "Achieved an average student satisfaction rate of **4.8/5**.",
-      "Awarded **Best Mentor** for **2** consecutive months, achieving one of the highest student satisfaction ratings among 20 mentors.",
-      "Supported **3** students in achieving **Best Capstone Project** awards through consistent feedback.",
+      "Mentored a class of **23** React.js students, achieving an average student satisfaction rate of **4.8/5**.",
+      "Awarded **'Best Mentor'** for **2** consecutive months, achieving one of the highest student satisfaction ratings among 20 mentors.",
+      "Supported **3** students in achieving **'Best Capstone Project'** awards through consistent technical feedback and guidance.",
     ],
   },
   {
     imageUrl: "/assets/experiences/works/neospectra.png",
     title: "Full Stack Developer",
     company: "LKP Neo Spectra English",
-    employmentType: "Freelance",
+    employmentType: "Project Based",
     date: "Dec 2023 - Aug 2024",
     description: "Built app.toeps.id using Next.js, NestJS, and PostgreSQL",
     descriptionList: [
@@ -86,7 +88,7 @@ export const WORKS: WorkExperience[] = [
     imageUrl: "/assets/experiences/works/neospectra.png",
     title: "Full Stack Developer",
     company: "LKP Neo Spectra English",
-    employmentType: "Freelance",
+    employmentType: "Project Based",
     date: "Feb 2023 - May 2023",
     description: "Built v1 of toeps.id using Laravel and Firebase",
     descriptionList: [
@@ -98,7 +100,7 @@ export const WORKS: WorkExperience[] = [
     imageUrl: "/assets/experiences/works/febunpad.jpeg",
     title: "Full Stack Developer",
     company: "BEM Kema FEB Unpad",
-    employmentType: "Freelance",
+    employmentType: "Project Based",
     date: "Jun 2022 - Sep 2022",
     description: "Developed a voting app for their award event.",
     descriptionList: ["Used by around 200 total users."],
